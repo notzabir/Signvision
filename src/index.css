@@ -4,3 +4,144 @@
 
 /* src/index.css */
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* index.css */
+@font-face {
+    font-family: 'GameBoy6x6';
+    src: url('./assets/fonts/game-boy-6x6-font.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'GameBoy6x6', sans-serif;
+  }
+
+/* index.css or App.css */
+
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px); /* Adjust the distance for desired float effect */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .float-animation {
+    animation: float 3s ease-in-out infinite; /* Adjust duration and timing */
+  }
+  
+/* index.css */
+
+@keyframes starMovement {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) translateX(20px); /* Adjust as needed */
+    opacity: 0.3;
+  }
+}
+
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: starMovement 4s linear infinite;
+}
+
+/* index.css */
+@keyframes slideAndFade {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Define a utility class for the animation */
+.animate-slide-and-fade {
+  animation: slideAndFade 10s ease-in-out infinite;
+}
+
+/* Invader Base Style */
+.invader {
+  position: absolute;
+  opacity: 0.8;
+  z-index: 5; /* Lower than main content but above the background */
+  pointer-events: none;
+}
+
+/* Keyframe Animations for Each Invader */
+@keyframes invader1 {
+  0% { transform: translate(-50px, -400px) rotate(0deg); }
+  25% { transform: translate(70vw, 200px) rotate(15deg); }
+  50% { transform: translate(-70vw, 400px) rotate(-10deg); }
+  75% { transform: translate(80vw, 600px) rotate(20deg); }
+  100% { transform: translate(-50px, 800px) rotate(0deg); }
+}
+
+@keyframes invader2 {
+  0% { transform: translate(50px, 600px) rotate(0deg); }
+  25% { transform: translate(-80vw, 600px) rotate(-15deg); }
+  50% { transform: translate(70vw, 400px) rotate(10deg); }
+  75% { transform: translate(-70vw, 200px) rotate(-20deg); }
+  100% { transform: translate(50px, -200px) rotate(0deg); }
+}
+
+@keyframes invader3 {
+  0% { transform: translate(0, -300px) rotate(0deg); }
+  25% { transform: translate(70vw, 200px) rotate(15deg); }
+  50% { transform: translate(-70vw, 500px) rotate(-10deg); }
+  75% { transform: translate(80vw, 800px) rotate(20deg); }
+  100% { transform: translate(0, 1000px) rotate(0deg); }
+}
+
+@keyframes invader4 {
+  0% { transform: translate(50px, 600px) rotate(0deg); }
+  25% { transform: translate(-80vw, 900px) rotate(-15deg); }
+  50% { transform: translate(80vw, 500px) rotate(10deg); }
+  75% { transform: translate(-80vw, 200px) rotate(-20deg); }
+  100% { transform: translate(50px, -100px) rotate(0deg); }
+}
+
+@keyframes invader5 {
+  0% { transform: translate(-100px, -500px) rotate(0deg); }
+  25% { transform: translate(70vw, 300px) rotate(15deg); }
+  50% { transform: translate(-80vw, 700px) rotate(-10deg); }
+  75% { transform: translate(70vw, 1000px) rotate(20deg); }
+  100% { transform: translate(-100px, 1000px) rotate(0deg); }
+}
+
+@keyframes invader6 {
+  0% { transform: translate(100px, 800px) rotate(0deg); }
+  25% { transform: translate(-70vw, 1000px) rotate(-15deg); }
+  50% { transform: translate(80vw, 600px) rotate(10deg); }
+  75% { transform: translate(-80vw, 300px) rotate(-20deg); }
+  100% { transform: translate(100px, 0px) rotate(0deg); }
+}
+
+/* Apply Animations */
+.animate-invader1 { animation: invader1 20s ease-in-out infinite; }
+.animate-invader2 { animation: invader2 24s ease-in-out infinite; }
+.animate-invader3 { animation: invader3 36s ease-in-out infinite; }
+.animate-invader4 { animation: invader4 28s ease-in-out infinite; }
+.animate-invader5 { animation: invader5 20s ease-in-out infinite; }
+.animate-invader6 { animation: invader6 22s ease-in-out infinite; }
+
